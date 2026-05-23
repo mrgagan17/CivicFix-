@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- HERO SECTION -->
+
+<div class="container-fluid hero-section text-white">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6 hero-text">
+
+                <h1>
+                    CivicFix – Smart Civic Complaint Management
+                </h1>
+
+                <p>
+                    CivicFix helping citizens report public.
+                    Submit complaints easily and track their resolution online.
+                </p>
+
+                <div class="hero-buttons">
+                    <a asp-controller="Account" asp-action="Register" class="btn btn-light btn-lg me-2 animated-btn">
+                        Register
+                    </a>
+
+                    <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light btn-lg animated-btn">
+                        Login
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 text-center hero-image">
+                <img src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807"
+                     class="img-fluid rounded shadow">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ABOUT SECTION -->
+
+<div class="container about-section">
+
+    <div class="text-center fade-up">
+        <h2>About CivicFix</h2>
+
+        <p class="about-text">
+            CivicFix is an online platform that allows citizens to report civic issues
+            directly to authorities. The system ensures transparency and accountability
+            by allowing users to track the status of their complaints until resolution.
+        </p>
+    </div>
+
+</div>
+
+
+<!-- FEATURES SECTION -->
+
+<div class="container features-section">
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+
+            <div class="feature-card">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+
+                <h4>Submit Complaints</h4>
+
+                <p>
+                    Citizens can quickly submit complaints related to public issues
+                    such as waste management, roads, and infrastructure problems.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="feature-card">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+
+                <h4>Track Status</h4>
+
+                <p>
+                    Users can track the progress of their complaints and see whether
+                    they are pending or resolved by the authorities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="feature-card">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
+
+                <h4>Efficient Resolution</h4>
+
+                <p>
+                    Administrators review complaints and take action quickly to
+                    ensure issues are resolved efficiently.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CALL TO ACTION -->
+
+<div class="container-fluid cta-section text-center text-white">
+
+    <h2>Help Improve Your Community</h2>
+
+    <p>
+        Report civic issues today and help make your city cleaner and safer.
+    </p>
+
+    <a asp-controller="Account" asp-action="Register"
+       class="btn btn-light btn-lg animated-btn">
+        Get Started
+    </a>
+
+</div>

@@ -1,0 +1,61 @@
+<h2 class="d-none">Admin Login</h2>
+
+<div class="admin-login-page">
+
+    ```
+    <div class="admin-login-card">
+
+        <h2 class="text-center mb-4">Admin Login</h2>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+
+                <input type="text"
+                       name="username"
+                       class="form-control custom-input"
+                       placeholder="Enter admin username"
+                       required
+                       oninvalid="this.setCustomValidity('Please enter admin username')"
+                       oninput="this.setCustomValidity('')" />
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">Password</label>
+
+                <input type="password"
+                       name="password"
+                       class="form-control custom-input"
+                       placeholder="Enter password"
+                       required
+                       oninvalid="this.setCustomValidity('Please enter password')"
+                       oninput="this.setCustomValidity('')" />
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <button type="submit" class="btn admin-login-btn">
+                    Login
+                </button>
+
+                <a asp-controller="Home" asp-action="Index" class="btn admin-back-btn">
+                    Back
+                </a>
+
+            </div>
+
+            @if (ViewBag.Error != null)
+            {
+                <p class="admin-error text-center mt-3">@ViewBag.Error</p>
+            }
+
+        </form>
+
+    </div>
+    ```
+
+</div>

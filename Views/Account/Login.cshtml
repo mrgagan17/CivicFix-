@@ -1,0 +1,58 @@
+﻿<h2 class="d-none">User Login</h2>
+
+<div class="login-page">
+
+    ```
+    <div class="login-card">
+
+        <h2 class="text-center mb-4">User Login</h2>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+
+                <input type="email"
+                       name="Email"
+                       class="form-control custom-input"
+                       placeholder="Enter your email"
+                       required
+                       oninvalid="this.setCustomValidity('Please enter your email')"
+                       oninput="this.setCustomValidity('')" />
+
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+
+                <input type="password"
+                       name="Password"
+                       class="form-control custom-input"
+                       placeholder="Enter your password"
+                       required
+                       oninvalid="this.setCustomValidity('Please enter your password')"
+                       oninput="this.setCustomValidity('')" />
+
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn login-btn">
+                    Login
+                </button>
+            </div>
+
+        </form>
+
+        <p class="text-center text-danger mt-3">@ViewBag.Message</p>
+
+        <div class="text-center mt-3">
+            <small>
+                Don't have an account?
+                <a asp-controller="Account" asp-action="Register">Register</a>
+            </small>
+        </div>
+
+    </div>
+    ```
+
+</div>

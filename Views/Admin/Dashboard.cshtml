@@ -1,0 +1,103 @@
+@model List<CivicFix.Models.Complaint>
+
+<div class="admin-dashboard-page">
+
+    ```
+    <div class="admin-dashboard-card">
+
+        <div class="dashboard-header">
+
+            <h2>Admin Dashboard</h2>
+
+            <a asp-controller="Admin"
+               asp-action="Exit"
+               class="btn admin-exit-btn">
+                Exit
+            </a>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table admin-table">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.ComplaintID</td>
+                            <td>@item.Title</td>
+                            <td>@item.Category</td>
+                            <td>@item.Location</td>
+                            <td>@item.Description</td>
+
+                            <td>
+                                @if (item.Status == "Resolved")
+                                {
+                                    <span class="badge status-resolved">Resolved</span>
+                                }
+                                else
+                                {
+                                    <span class="badge status-pending">Pending</span>
+                                }
+                            </td>
+
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ImagePath))
+                                {
+                                    <a href="@item.ImagePath" target="_blank" class="view-img-btn">
+                                        View Image
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">No Image</span>
+                                }
+                            </td>
+
+                            <td>
+
+                                @if (item.Status != "Resolved")
+                                {
+                                    <a asp-controller="Admin"
+                                       asp-action="Resolve"
+                                       asp-route-id="@item.ComplaintID"
+                                       class="btn resolve-btn">
+                                        Resolve
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="badge status-resolved">Resolved</span>
+                                }
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+    ```
+
+</div>

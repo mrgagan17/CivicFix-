@@ -1,0 +1,54 @@
+﻿@model List<CivicFix.Models.Complaint>
+
+<div class="complaints-page">
+
+    ```
+    <div class="complaints-card">
+
+        <h2 class="text-center mb-4">My Complaints</h2>
+
+        <div class="table-responsive">
+
+            <table class="table complaints-table">
+
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.Category</td>
+                            <td>@item.Location</td>
+
+                            <td>
+                                @if (item.Status == "Resolved")
+                                {
+                                    <span class="badge status-resolved">Resolved</span>
+                                }
+                                else
+                                {
+                                    <span class="badge status-pending">Pending</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+    ```
+
+</div>

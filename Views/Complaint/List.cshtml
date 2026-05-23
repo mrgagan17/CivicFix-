@@ -1,0 +1,23 @@
+﻿@model List<CivicFix.Models.Complaint>
+
+<h2>All Complaints</h2>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Location</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Category</td>
+            <td>@item.Location</td>
+            <td>@item.Status</td>
+        </tr>
+    }
+
+</table>
